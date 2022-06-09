@@ -1,0 +1,9 @@
+.MyPackage .Greeting {
+    font-family: cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 0.2em;
+    background: thistle;
+    color: darkblue;
+}

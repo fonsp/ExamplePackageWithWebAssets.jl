@@ -1,0 +1,33 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "deno vendor (1/2): clear",
+            "command": "rm",
+            "args": [
+                "-rf",
+                "vendor"
+            ],
+            "options": {
+                "cwd": "frontend"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "deno vendor",
+            "type": "deno",
+            "command": "vendor",
+            "args": [
+                "index.js"
+            ],
+            "options": {
+                "cwd": "frontend"
+            },
+            "dependsOn": [
+                "deno vendor (1/2): clear"
+            ],
+        }
+    ]
+  }
